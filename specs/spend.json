@@ -1,0 +1,41 @@
+{
+    "div": "spendmap",
+    "view": [53.0, -1.5],
+    "zoom": 6,
+    "data":
+        {
+            "csv_url": "data/diabetes_per_head_per_ccg_per_month.csv",
+            "json_url": "data/ccg-boundaries.json"
+        },
+    "merge" :
+        {
+            "csv_key": "ccg_code",
+            "json_object": "ccg_boundaries"
+
+        },
+    "legend":
+        {
+            "title" : "Spend per head",
+            "categories": [],
+            "range": [28, 26, 24, 22, 20, 18, 16, 0],
+            "colors": ["#225EA8","#1D91C0", "#41B6C4", "#7FCDBB", "#C7E9B4","#EDF8B1", "#FFFFD9"]
+        },
+    "infoBox":
+        {
+            "header": "<h3>Diabetes Spend per CCG</h3>",
+            "labels": ["CCG Name: ", "CCG Code: ", "Registered Patients: ", "Diabetes Patients: ", "Total Spend: £", "Spend per diabetes patient: £"],
+            "fields": [
+                "ccg_name",
+                "ccg_code",
+                "registered_patients",
+                "diabetes_patients",
+                "total_spend",
+                "per_capita_spend"
+            ],
+            "formats": [null, null, "0,0", "0,0", "0,0.00", "0,0.00"]
+        },
+    "marks":
+        {
+            "scaleField": "per_capita_spend"
+        }
+}

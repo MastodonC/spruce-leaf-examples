@@ -1,0 +1,44 @@
+input{
+    vertical-align: text-top;
+}
+
+:focus {
+    outline-color: forestgreen;
+    outline-style: none;
+}
+
+input[type="text"]{
+    margin: 0; padding: 0;
+    border: 1px solid forestgreen;
+    height: 28px;
+    font-size: 28px;
+    text-align: left;
+    font: 85% "Arial",Verdana,sans-serif;
+
+}
+
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+}
+
+#submit {
+    border-radius: 6px;
+    background: transparent;
+    height: 29px;
+    border: 2px solid forestgreen;
+    text-decoration: none;
+    font-size: 28px;
+    color: #808080;
+    font: 85% "Arial",Verdana,sans-serif;
+    transition: all 0.3s ease-out;
+    box-shadow:
+        0 2px 1px rgba(0, 0, 0, 0.2),
+        inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#submit:hover {
+    background: limegreen;
+}
